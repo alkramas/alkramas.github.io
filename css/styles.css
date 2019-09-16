@@ -1,0 +1,186 @@
+/*******************************
+base styles
+*******************************/
+* {
+
+  box-sizing: border-box;
+}
+html {
+    width:100%;
+    height: 100%;
+    display: table;
+}
+body {
+  position: relative;
+  background-image: linear-gradient(to bottom, #7a818e, #7f8a99, #8494a3, #889ead, #8ca8b6, #8bb0bb, #8bb9be, #8ec1bf, #96c7b6, #a7cca9, #c0ce9e, #dccd98);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width:100%;
+  display:table-cell;
+}
+html, body {
+    margin: 0px;
+    padding: 0px;
+}
+
+body::after {
+  content:"";
+  background: url('../images/deadsea.png');
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+  background-position:bottom;
+  opacity:0.1;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+}
+h1, h2, h3, h4, .navbar-brand {
+  font-family: 'Codystar', cursive;
+}
+h4 {
+  font-size: 1.5em;
+}
+h5 {
+  font-weight: bold;
+  opacity: .8;
+  font-family: 'Codystar', cursive;
+}
+h5.filter {
+  color: white;
+}
+label {
+  color: white;
+  opacity: .8;
+}
+li, p {
+  font-family: 'Noto Serif', serif;
+  /* color: #2e2e30; */
+}
+
+img.contact-home {
+  border-radius: 50%;
+  width: 2.5em;
+  border: rgba(240,240,240, .6) 3px solid;
+}
+div.jumbotron, input.form-control {
+  background-color: transparent;
+}
+div.jumbotron {
+  padding: 1rem 2rem 2rem 2rem;
+}
+input.form-check-input {
+  opacity: .8;
+}
+/*******************************
+  card
+*******************************/
+
+button.viewed::before {
+  content:"✓";
+  font-family: 'Helvetica', sans-serif;
+  display:inline-block;
+  width: 1em;
+  height: 1em;
+}
+/*******************************
+  svg elements
+*******************************/
+.svg-compass {
+  width: 40%;
+  max-width: 300px;
+  opacity: .9;
+}
+
+@keyframes compass {
+  10% {
+    transform: rotate(150deg);
+  }
+  50% {
+    transform: rotate(20deg);
+  }
+  70% {
+    transform: rotate(30deg);
+  }
+  100% {
+    transform: rotate(30deg);
+  }
+}
+@keyframes compass2 {
+  70% {
+    transform: rotate(80deg);
+  }
+  100% {
+    transform: rotate(30deg);
+  }
+}
+.svg-compass {
+  animation: compass 2.75s;
+  animation-timing-function: ease-out;
+  transform-origin: 50% 50%;
+  transform: rotate(30deg) scale(1);
+}
+
+.svg-compass:hover {
+  animation: compass2 2.75s;
+  animation-timing-function: ease-out;
+  transform-origin: 50% 50%;
+  transform: rotate(30deg) scale(1);
+}
+
+@keyframes outerring {
+  40% {
+    transform: rotate(400deg);
+  }
+  80% {
+    transform: rotate(357deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.outer-ring  {
+  animation: outerring 3.25s;
+  animation-timing-function: ease-out;
+  transform-origin: 50% 50%;
+}
+
+.project-icon:hover .p-icon-ring  {
+  animation: outerring 2s;
+  animation-timing-function: ease-out;
+  transform-origin: 50% 50%;
+}
+
+.project-icon {
+  opacity: .4;
+  transform: scale(.8);
+  transition: 1s all ease-out;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.project-icon:hover, .graphic-dashoard:hover {
+  opacity: .6;
+  transform: scale(1);
+}
+
+@media (max-width: 578px) {
+  .project-icon {
+    max-width: 300px;
+    width: 40%;
+    margin-bottom: -1.5em
+  }
+}
+
+/*******************************
+  contact elements
+*******************************/
+.contact-icon {
+  width: 1em;
+  height: 1em;
+  margin-right: 1em;
+  display: inline-block;
+}
