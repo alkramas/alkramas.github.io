@@ -39,7 +39,7 @@ function filterBySkills() {
             let thisSkill = thisModalBodySkills[iii];
             let thisSkillText = thisSkill.textContent.toLowerCase();
             checkedSkills.toString();
-            if (checkedSkills.includes(thisSkillText)) {
+            if (checkedSkills.includes(thisSkillText) || checkedSkills.length === 0) {
               displayCard = true;
             } else {
               skillNotFound = true;
