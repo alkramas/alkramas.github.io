@@ -195,14 +195,17 @@ h5.filter {
 /* media breakpoint overrides */
 @media (min-width: 576px) {
   .project-icon {
-    max-width: unset;
+    max-width: 350px;
     width: unset;
-    margin-bottom: 0;
+    margin-bottom: -3.5em;
+    margin-top: -2.5em;
   }
 }
 @media (min-width: 768px) {
   .project-icon {
     max-width: 400px;
+    margin-bottom: -2em;
+    margin-top: -1em;
   }
   h5.filter {
     margin-top: 0em;
@@ -211,7 +214,7 @@ h5.filter {
     margin-top: 0em;
   }
   #filter > div.row {
-    margin: initinal;
+    margin: unset;
     max-width: revert;
   }
 }
