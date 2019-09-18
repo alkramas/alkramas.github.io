@@ -95,7 +95,7 @@ button.viewed::before {
   svg elements
 *******************************/
 .svg-compass {
-  width: 40%;
+  width: 70%;
   max-width: 300px;
   opacity: .9;
 }
@@ -199,6 +199,11 @@ h5.filter {
     width: unset;
     margin-bottom: -3.5em;
     margin-top: -2.5em;
+  }
+  .svg-compass {
+    width: 100%;
+    max-width: 300px;
+    opacity: .9;
   }
 }
 @media (min-width: 768px) {
