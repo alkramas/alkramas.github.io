@@ -81,7 +81,9 @@ input.form-check-input {
 /*******************************
   card
 *******************************/
-
+.card {
+  width: 100%;
+}
 button.viewed::before {
   content:"✓";
   font-family: 'Helvetica', sans-serif;
@@ -170,14 +172,49 @@ button.viewed::before {
   transform: scale(1);
 }
 
-@media (max-width: 578px) {
-  .project-icon {
-    max-width: 300px;
-    width: 40%;
-    margin-bottom: -1.5em
-  }
+/*******************************
+  break points
+*******************************/
+/* default values */
+#filter > div.row {
+  margin: 0 auto;
+  max-width: 12em;
+}
+.project-icon {
+  max-width: 300px;
+  width: 40%;
+  margin-bottom: -1.5em
+}
+h5.filter {
+  margin-top: 1em;
+}
+#filter div div:first-child h5.filter {
+  margin-top: 0em;
 }
 
+/* media breakpoint overrides */
+@media (min-width: 576px) {
+  .project-icon {
+    max-width: unset;
+    width: unset;
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 768px) {
+  .project-icon {
+    max-width: 400px;
+  }
+  h5.filter {
+    margin-top: 0em;
+  }
+  #filter div div:first-child h5.filter {
+    margin-top: 0em;
+  }
+  #filter > div.row {
+    margin: initinal;
+    max-width: revert;
+  }
+}
 /*******************************
   contact elements
 *******************************/
